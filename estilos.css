@@ -1,0 +1,78 @@
+#seccion {
+    display: none;
+}
+
+#seccionPlanEstudio {
+    display: none;
+    width: 60%;
+    margin: auto;
+}
+
+#plan {
+    width: 100%;
+    margin: auto;
+}
+.formulario {
+    padding: 10px;
+    width: 60%;
+    margin: auto;
+    border: 10px solid rgb(176, 111, 37);
+    border-color: rgb(204, 47, 35);
+}
+
+.inputs {
+    width: 100%;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    color: blue;
+}
+
+h2 {
+    text-align: center;
+}
+
+
+
+#divResumen {
+    display: none;
+    font-size: 20px;
+    color: red;
+    text-align: center;
+}
+
+
+input {
+    padding: 5px;
+    margin: 5px;
+    border: 5px solid rgb(86, 177, 33);
+}
+
+#sede {
+    display: none;
+    align-items: center;
+}
+
+#dirSede {
+    text-align: center;
+    display: none;
+}
+
+#resultado {
+    font-size: 15px;
+    width: 60%;
+    text-align: center;    
+    padding: 20px;
+    margin: auto;
+    border: 5px solid red;
+}
+
+#materias {
+    padding: 10px;
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    color: aliceblue;
+}
