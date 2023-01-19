@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <!-- Metadatos -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Nicolás Aizner">
+    <meta name="description" content="Portafolio de Desarrollo">
+    <meta name="keywords" content="html, css, javascript, bootstrap, diseño web, React, desarrollo back end">
+    <meta name="viewport" content="whith=device-whith, initial-scale=1">
+    <title>Nicolás Aizner | Back-End Development</title>
+    <!-- Favicon -->
+    <link href="imagenes/code-square.svg" rel="icon" type="image/x-icon">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <!-- Estilos CSS -->
+    <link href="estilosPreEntrega2.css" rel="stylesheet"/>
+    <!-- Google Font / Fuente Rubik Dirt -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!--Barra de Navegación-->
+    <nav class="navbar navbar-expand-md navbar-ligth">
+        <div class="container-fluid">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-toggler" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+          <div class="collapse navbar-collapse" id="navbar-toggler">
+            <a class="navbar-brand" href="#">
+                <img src="imagenes/code-square.svg" whith="50" height="30" alt="Logo Dev Back-End">
+            </a>
+            <ul class="navbar-nav d-flex justify-content-center align-items-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Sobre Mí</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Proyectos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Testimonios</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#Contacto">Contactos</a>
+              </li>
+
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <!-- Sección Principal -->
+      <section class="hero align-items-stretch">
+        <div class="hero-principal d-flex flex-column justify-content-center align-items-center">
+          <img class="hero-imagen-desarrollador" src="./imagenes/Foto-nicolas-aizner-2.jpg" alt="Foto de Nicolas Aizner">
+          <h1>Hola, soy Nicolás Aizner</h1>
+          <h2>Desarrollo Web Back-End / Front-End</h2>
+        </div>
+        <div class="hero-inferior">
+          <img class="hero-inferior-imagen img-fluid" src="./imagenes/hero-inferior.svg" alt="Desarrollo Web html css javascript bootstrap react y angular">
+        </div>
+      </section>
+      <!-- Seccion Sobre Mí-->
+      <section class="sobre-mi seccion-oscura">
+        <div class="contenedor">
+          <h2 class="seccion-titulo">Conoce nuestras habilidades</h2>
+          <p class="seccion texto">Selecciona el área de tu interés para conocer las especialidades que podemos aplicar a tus proyectos</p>
+          <!-- Selección de area de interés-->
+          <select id="seleccionPlanTrabajos" class="form-select" aria-label="Default select example">
+            <option selected>Elige los trabajos que necesitas</option>
+            <option value="1">Diseño Web</option>
+            <option value="2">Desarrollo Back-End</option>
+            <option value="3">Marketing Online</option>
+          </select>
+        <div id="selectTrabajos"></div>
+        <form id="otrosTrabajos">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">¿Qué área de tu Proyecto necesitas mejorar?</label>
+            <input type="text" class="form-control" id="nuevaEspecialidad" placeholder="Escribe en que área de tu pruecto debemos enfocarnos">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Describe brevemente el problema a resolver</label>
+            <input type="text" class="form-control" id="nuevoAlcance" placeholder="¿Cuál es el problema?">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Comentanos cual crees que es tu objetivo Final</label>
+            <input type="text" class="form-control" id="nuevoObjetivo" placeholder="Objetivos a aclanzar">
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" onclick="clickNuevoTrabajo()" type="submit">Confirmar</button>
+          </div>  
+        </form>
+        </div>
+      </section>
+      <section>
+        <h2 class="tituloClientes">Clientes que trabajaron con Nosotros</h2>
+        <div id="clientes"></div>
+        <div class="col-12">
+          <button class="btn btn-primary" onclick="nuevoCliente()" type="">Sé nuestro Nuevo Cliente Ahora</button>
+        </div> 
+        <div id="nuevoCliente"></div>
+        <div id="grandesClientes"></div>
+      </section>
+      <section class="experiencia seccion-clara">
+        <dic class="container text-center">
+          <div class="row">
+            <!-- Desarrollo Web -->
+            <div class="columna col-12 col-md-4">
+              <i class="bi bi-laptop"></i>
+              <p class="experiencia-titulo">Desarrollo Web</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing elit. Temporibus non aut voluptate natus adipisci omnis enim quam </p>
+              <div class="badges-contenedor">
+                <span class="badge text-bg-primary">HTML</span>
+                <span class="badge text-bg-primary">CSS</span>
+                <span class="badge text-bg-primary">JAVASCRIPT</span>
+                <span class="badge text-bg-primary">ANGULAR</span>
+              </div>  
+            </div>  
+            <!-- Proyectos -->
+            <div class="columna col-12 col-md-4">
+              <i class="bi bi-laptop"></i>
+              <p class="experiencia-titulo">Proyectos</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing elit. Temporibus non aut voluptate natus adipisci omnis enim quam </p>
+              <div class="badges-contenedor">
+                <span class="badge text-bg-primary">Wordpress</span>
+                <span class="badge text-bg-primary">Angular - Bootstrap</span>
+                <span class="badge text-bg-primary">Back-end / Servidores</span>
+              </div>  
+            </div>  
+            <!-- Formación -->
+            <div class="columna col-12 col-md-4">
+              <i class="bi bi-laptop"></i>
+              <p class="experiencia-titulo">Formación</p>
+              <p>Lorem ipsum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing psum, dolor sit amet consectetur adipisicing elit. Temporibus non aut voluptate natus adipisci omnis enim quam </p>
+              <div class="badges-contenedor">
+                <span class="badge text-bg-primary">HTML / CSS</span>
+                <span class="badge text-bg-primary">JavaScript</span>
+                <span class="badge text-bg-primary">SQL /MySQL</span>
+                <span class="badge text-bg-primary">Node-JS</span>
+                <span class="badge text-bg-primary">Ángular - React</span>
+                <span class="badge text-bg-primary">Adm. de Empresas</span>
+              </div>   
+            </div>
+          </div>
+        </dic>
+      </section>
+      <!-- Sección Proyectos - Portfolio -->
+      <section class="proyectos-recientes seccion-clara d-flex flex-column">
+        <h2 class="seccion-titulo texto-negro">Mis Proyectos</h2>
+        <h3 class="seccion-descripcion">Conoce mis proyectos realizados mediante distintas tecnologías aplicadas</h3>
+        <!-- Galería de proyectos -->
+        <div class="container text-center proyectos-contenedor"> 
+          <div class="row">
+            <!-- Proyecto 1 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto1.png" alt="Proyecto 1">
+                <div class="overlay">
+                  <p>Proyecto 1</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 2 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto2.png" alt="Proyecto 2">
+                <div class="overlay">
+                  <p>Proyecto 2</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 3 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto3.png" alt="Proyecto 3">
+                <div class="overlay">
+                  <p>Proyecto 3</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 4 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto4.png" alt="Proyecto 4">
+                <div class="overlay">
+                  <p>Proyecto 4</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 5 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto5.png" alt="Proyecto 5">
+                <div class="overlay">
+                  <p>Proyecto 5</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- Proyecto 6 --> 
+            <div class="col-12 col-md-6 col-lg-4">
+              <div class="proyecto">
+                <img src="./imagenes/proyecto6.png" alt="Proyecto 6">
+                <div class="overlay">
+                  <p>Proyecto 6</p>
+                  <div class="iconos-contenedor d-flex">
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#" target="_blank" rel="noopener noreferrer">
+                      <i class="bi bi-laptop"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <a href="#" target="_blank" rel="noopener noreferrer">
+        <button type="button" class="btn btn-info">
+          Ver más proyectos
+          <i class="bi bi-arrow-right-circle-fill"></i>
+        </button>
+      </a>
+      </section>
+      <!-- Sección Formulario de Contacto -->
+      <section>
+        <h2 id="Contacto">Recibí asesoramiento ahora</h2>
+        <form class="seccion-contacto">
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Tu Nombre">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Correo electrónico">
+          </div>
+          <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Teléfono</label>
+            <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Tu teléfono">
+          </div>
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Motivo de consulta</option>
+            <option value="1">Diseño y funcionalidad en tu Web</option>
+            <option value="2">Servidores - APIS - Bases de datos</option>
+            <option value="3">E-Commerce</option>
+            <option value="4">Marketing Digital</option>
+          </select>
+          <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Dejá tu mensaje aquí</label>
+            <textarea id="mensajeCliente" class="form-control" id="exampleFormControlTextarea1" rows="3" value="trabajoElegido()"></textarea>
+          </div>
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit">Enviar</button>
+          </div>
+      </form>
+      </section>
+    <script src="PreEntrega2+Aizner.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+</body>
+</html>
